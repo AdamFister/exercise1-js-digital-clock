@@ -36,7 +36,7 @@ if (month < 10) {
 }
 
 // JDH Edit
-    updatePage('date', day + ":" + month + ":" + year, "800");
+    updatePage('date', month + "/" + day + "/" + year, "800");
 
 
 
