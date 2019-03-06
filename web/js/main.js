@@ -13,18 +13,14 @@ function startTime() {
     // add a zero in front of numbers<10
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-    document.getElementById('time').style.fontFamily = "monospace";
-    document.getElementById('time').style.fontSize = "1000%";
-    
+
     // JDH Edit
-    // updatepage('time', h + ":" + m + ":" + s, "1000");
+    updatePage('time', h + ":" + m + ":" + s, "1000");
     
     t = setTimeout(function () {
         startTime()
     }, 500);
 }
-startTime();
 
 var dateObj = new Date();
 var month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -39,12 +35,8 @@ if (month < 10) {
     month = '0' + month;
 }
 
-document.getElementById('date').innerHTML = month + "/" + day + "/" + year;
-document.getElementById('date').style.fontFamily = "monospace";
-document.getElementById('date').style.fontSize = "800%";
-
 // JDH Edit
-    // updatepage('date', h + ":" + m + ":" + s, "800");
+    updatePage('date', day + ":" + month + ":" + year, "800");
 
 
 
@@ -62,12 +54,9 @@ function startTime2() {
     // add a zero in front of numbers<10
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('time2').innerHTML = h + ":" + m + ":" + s;
-    document.getElementById('time2').style.fontFamily = "monospace";
-    document.getElementById('time2').style.fontSize = "1000%";
     
     // JDH Edit
-    // updatepage('time2', h + ":" + m + ":" + s, "1000");
+    updatePage('time2', h + ":" + m + ":" + s, "1000");
     
     t = setTimeout(function () {
         startTime2()
@@ -94,12 +83,14 @@ function myFunction() {
 //     }
 //   }
 
-// function updatePage (elementID, timeStr, fontSize){
-//     elementID is the element you want to change
-//     timeStr is the concatenation of the time values
-//     fontSize is the string value of the percentage to change
-//     note: didn't see a place for you to change the fontFamily after the page loaded
-//     document.getElementById(elementID).innerHTML = timeStr;
-//     document.getElementById(elementID).style.fontFamily = "monospace";
-//     document.getElementById(elementID).style.fontSize = fontSize+"%";
-// }
+function updatePage (elementID, timeStr, fontSize){
+    //elementID is the element you want to change
+    //timeStr is the concatenation of the time values
+    //fontSize is the string value of the percentage to change
+    //note: didn't see a place for you to change the fontFamily after the page loaded
+    document.getElementById(elementID).innerHTML = timeStr;
+    document.getElementById(elementID).style.fontFamily = "monospace";
+    document.getElementById(elementID).style.fontSize = fontSize+"%";
+}
+
+startTime();
