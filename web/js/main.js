@@ -85,14 +85,14 @@ function myFunction() {
         mainFrameTwo.style.display == "none" ? "block" : "none"); 
  }
 
-function hideButton() {
-    var x = document.getElementById("time");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
+// function hideButton() {
+//     var x = document.getElementById("time");
+//     if (x.style.display === "none") {
+//       x.style.display = "block";
+//     } else {
+//       x.style.display = "none";
+//     }
+//   }
 
 // function updatePage (elementID, timeStr, fontSize){
 //     elementID is the element you want to change
