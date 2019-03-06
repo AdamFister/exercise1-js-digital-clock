@@ -44,7 +44,7 @@ if (month < 10) {
 //document.getElementById('date').style.fontSize = "800%";
 
 // JDH Edit
-    updatepage('date', h + ":" + m + ":" + s, "800");
+    updatepage('date', month + "/" + day + "/" + year, "800");
 
 
 
