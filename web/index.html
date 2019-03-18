@@ -14,25 +14,38 @@
 
 <body>
     
-    <div class="container">
-        <div id="date"></div>
+    <div id="app">
+        <div class="container">
+                <br>
+            <date></date>
+            <br>
+            <div>
+                
+                <div class="border border-info rounded border-10">
+                        
+                        <div id="militarytime">
+                                <h1>{{ time_str }}</h1>
+                            </div>
+ 
+                    <div id="standardTime">
+                        <div class="time" id="timeStandard"></div>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-info" @click="isMilitary = !isMilitary">Time Format</button>
+            </div>
+        </div>
+        <br>
+        
+            
+        
     </div>
-    
-    
-    <div class="container">
-        <div id="mainFrameOne">
-            <div id="time"></div>
-        </div>
-        <div id="mainFrameTwo" style="display:none;">
-            <div id="time2"></div>
-        </div>
-    
-    <button onclick="myFunction()">Military Time</button>
-</div>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- development version, includes helpful console warnings -->
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
